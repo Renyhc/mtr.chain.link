@@ -1,0 +1,147 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address[]",
+						"name": "senders",
+						"type": "address[]"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "changedBy",
+						"type": "address"
+					}
+				],
+				"name": "AuthorizedSendersChanged",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "getAuthorizedSenders",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					}
+				],
+				"name": "isAuthorizedSender",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address[]",
+						"name": "senders",
+						"type": "address[]"
+					}
+				],
+				"name": "setAuthorizedSenders",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"getAuthorizedSenders()": {
+					"returns": {
+						"_0": "array of addresses"
+					}
+				},
+				"isAuthorizedSender(address)": {
+					"params": {
+						"sender": "The address of the Chainlink node"
+					},
+					"returns": {
+						"_0": "The authorization status of the node"
+					}
+				},
+				"setAuthorizedSenders(address[])": {
+					"params": {
+						"senders": "The addresses of the authorized Chainlink node"
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"getAuthorizedSenders()": {
+					"notice": "Retrieve a list of authorized senders"
+				},
+				"isAuthorizedSender(address)": {
+					"notice": "Use this to check if a node is authorized for fulfilling requests"
+				},
+				"setAuthorizedSenders(address[])": {
+					"notice": "Sets the fulfillment permission for a given node. Use `true` to allow, `false` to disallow."
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			".deps/npm/@chainlink/contracts/src/v0.8/AuthorizedReceiver.sol": "AuthorizedReceiver"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		".deps/npm/@chainlink/contracts/src/v0.8/AuthorizedReceiver.sol": {
+			"keccak256": "0xbfa2d0e2da981587f2fb779ca83f0d682bd1f8cef0d0f0d588e44feedb109dcb",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9d4845b5b08aaa25e49c2c440562aaa7a574b183857d595a4b25ee55fed2ec45",
+				"dweb:/ipfs/QmQ6wvQKFurZyBS4MGfMasUzJrZhGw4CC2xkLCfBXA2CEG"
+			]
+		},
+		".deps/npm/@chainlink/contracts/src/v0.8/interfaces/AuthorizedReceiverInterface.sol": {
+			"keccak256": "0xa08b82adc14dac9698f94a75b604f6d1bb5cd1fa0e2fa1ee9692d19c94216b66",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f101ed8f1b7aeaf383349560b36bffc6e30cd63a097455581c32daa0f031969e",
+				"dweb:/ipfs/QmPp92jPEYyAVq8Nc1umjAXbzgxtjTLTKu9aNSi4rTCRg7"
+			]
+		}
+	},
+	"version": 1
+}

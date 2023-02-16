@@ -1,0 +1,91 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "recipient",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "withdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdrawable",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"withdraw(address,uint256)": {
+					"params": {
+						"amount": "is the amount of LINK to send",
+						"recipient": "is the address to send the LINK to"
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"withdraw(address,uint256)": {
+					"notice": "transfer LINK held by the contract belonging to msg.sender to another address"
+				},
+				"withdrawable()": {
+					"notice": "query the available amount of LINK to withdraw by msg.sender"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			".deps/npm/@chainlink/contracts/src/v0.8/interfaces/WithdrawalInterface.sol": "WithdrawalInterface"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		".deps/npm/@chainlink/contracts/src/v0.8/interfaces/WithdrawalInterface.sol": {
+			"keccak256": "0x7f7276c50fcaec635ea491e6fa1176788c46c343ba93d930d4e7afac171ca4c1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4b0687cd0deb9c19004f80f3347e97114471d49e93c8e5c162576aeaf9f0492b",
+				"dweb:/ipfs/QmVJ97DT1GJEB1iwRRDiQ4nTe19F2hQhszAC8MNHf4zp7U"
+			]
+		}
+	},
+	"version": 1
+}

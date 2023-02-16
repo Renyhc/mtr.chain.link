@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.7+commit.e28d00a7"
+		"version": "0.8.18+commit.87f61d96"
 	},
 	"language": "Solidity",
 	"output": {
@@ -98,44 +98,6 @@
 					},
 					{
 						"indexed": true,
-						"internalType": "int256",
-						"name": "change",
-						"type": "int256"
-					}
-				],
-				"name": "RequestEthereumChangeFulfilled",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": true,
-						"internalType": "bytes32",
-						"name": "requestId",
-						"type": "bytes32"
-					},
-					{
-						"indexed": true,
-						"internalType": "bytes32",
-						"name": "market",
-						"type": "bytes32"
-					}
-				],
-				"name": "RequestEthereumLastMarket",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": true,
-						"internalType": "bytes32",
-						"name": "requestId",
-						"type": "bytes32"
-					},
-					{
-						"indexed": true,
 						"internalType": "uint256",
 						"name": "price",
 						"type": "uint256"
@@ -181,19 +143,6 @@
 			},
 			{
 				"inputs": [],
-				"name": "changeDay",
-				"outputs": [
-					{
-						"internalType": "int256",
-						"name": "",
-						"type": "int256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
 				"name": "currentPrice",
 				"outputs": [
 					{
@@ -203,42 +152,6 @@
 					}
 				],
 				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "bytes32",
-						"name": "_requestId",
-						"type": "bytes32"
-					},
-					{
-						"internalType": "int256",
-						"name": "_change",
-						"type": "int256"
-					}
-				],
-				"name": "fulfillEthereumChange",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "bytes32",
-						"name": "_requestId",
-						"type": "bytes32"
-					},
-					{
-						"internalType": "bytes32",
-						"name": "_market",
-						"type": "bytes32"
-					}
-				],
-				"name": "fulfillEthereumLastMarket",
-				"outputs": [],
-				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -274,19 +187,6 @@
 			},
 			{
 				"inputs": [],
-				"name": "lastMarket",
-				"outputs": [
-					{
-						"internalType": "bytes32",
-						"name": "",
-						"type": "bytes32"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
 				"name": "owner",
 				"outputs": [
 					{
@@ -296,42 +196,6 @@
 					}
 				],
 				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "_oracle",
-						"type": "address"
-					},
-					{
-						"internalType": "string",
-						"name": "_jobId",
-						"type": "string"
-					}
-				],
-				"name": "requestEthereumChange",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "_oracle",
-						"type": "address"
-					},
-					{
-						"internalType": "string",
-						"name": "_jobId",
-						"type": "string"
-					}
-				],
-				"name": "requestEthereumLastMarket",
-				"outputs": [],
-				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -377,7 +241,7 @@
 			"kind": "dev",
 			"methods": {
 				"constructor": {
-					"details": "LINK address in Goerli network: 0x326C977E6efc84E512bB9C30f76E30c160eD06FBCheck https://docs.chain.link/docs/link-token-contracts/ for LINK address for the right network"
+					"details": "LINK address in Sepolia network: 0x779877A7B0D9E8603169DdbD7836e478b4624789Check https://docs.chain.link/docs/link-token-contracts/ for LINK address for the right network"
 				}
 			},
 			"version": 1
@@ -389,7 +253,7 @@
 					"notice": "Allows an ownership transfer to be completed by the recipient."
 				},
 				"constructor": {
-					"notice": "Goerli"
+					"notice": "Sepolia"
 				},
 				"owner()": {
 					"notice": "Get the current owner"
@@ -404,9 +268,9 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"docs.chain.link/samples/APIRequests/AEthereumConsumer.sol": "ATestnetConsumer"
+			"docs.chain.link/samples/APIRequests/ATestnetConsumer.sol": "ATestnetConsumer"
 		},
-		"evmVersion": "london",
+		"evmVersion": "paris",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -530,12 +394,12 @@
 				"dweb:/ipfs/QmXjy7BmtnPeCLMaMnGGnsxDPGxohfDpYzP8PnUoh6gBGa"
 			]
 		},
-		"docs.chain.link/samples/APIRequests/AEthereumConsumer.sol": {
-			"keccak256": "0xb73a6e3603e5fabcf50a98ff1e2a2941783d462636603582f8bf04dd4d57d0b1",
+		"docs.chain.link/samples/APIRequests/ATestnetConsumer.sol": {
+			"keccak256": "0x5f2fd0cd55ef7a3b42fc5c6ea24a62e6e9b2054af2225d3e30920ade17fade54",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://87a0273f8d075d957f7babe821bc2550152abb0e3508c1bea08741226f77b851",
-				"dweb:/ipfs/QmXHQafuq4TrrBajcZFsjQTEEVXGdBDTftjtixjcvPuXfE"
+				"bzz-raw://131b7d33c1f1933c6ab782ed9631a09f5fd52b4ef483c0b7bcc3a17e71ed0ad4",
+				"dweb:/ipfs/QmSZYbSr5MLX7Hmbg6j7fB88AmqB5KajXWvXnW6TodMMzc"
 			]
 		}
 	},
