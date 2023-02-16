@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.7;
+pragma solidity ^0.8.18;
 
 import "@chainlink/contracts/src/v0.8/ChainlinkClient.sol";
 import "@chainlink/contracts/src/v0.8/ConfirmedOwner.sol";
@@ -18,7 +18,7 @@ contract ASojaPriceConsumer is ChainlinkClient, ConfirmedOwner {
     );
 
     constructor() ConfirmedOwner(msg.sender) {
-        setChainlinkToken(0x326C977E6efc84E512bB9C30f76E30c160eD06FB);
+        setChainlinkToken(0x779877A7B0D9E8603169DdbD7836e478b4624789);
     }
 
     function requestSOJAPrice(

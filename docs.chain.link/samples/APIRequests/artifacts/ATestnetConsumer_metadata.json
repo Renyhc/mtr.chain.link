@@ -395,11 +395,11 @@
 			]
 		},
 		"docs.chain.link/samples/APIRequests/ATestnetConsumer.sol": {
-			"keccak256": "0x5f2fd0cd55ef7a3b42fc5c6ea24a62e6e9b2054af2225d3e30920ade17fade54",
+			"keccak256": "0x27480915e612bee92a1592caf71e281896e6a1472db402886e598d4697d9ff6e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://131b7d33c1f1933c6ab782ed9631a09f5fd52b4ef483c0b7bcc3a17e71ed0ad4",
-				"dweb:/ipfs/QmSZYbSr5MLX7Hmbg6j7fB88AmqB5KajXWvXnW6TodMMzc"
+				"bzz-raw://897891035d80a5355045432c26d31b8789860a43e541f3a5a613de0842f32fc3",
+				"dweb:/ipfs/QmZw6U5WwKSYZDmPb8t978smBnpX5HDGEZTEkQpshMoQju"
 			]
 		}
 	},

@@ -413,11 +413,11 @@
 			]
 		},
 		"docs.chain.link/samples/APIRequests/ASojaPriceConsumer.sol": {
-			"keccak256": "0x98edaa0a38385be7788714c0ce6c49bf0af4256db86d775bf1f02d037eb22327",
+			"keccak256": "0x5bfed782c7d2d91aaa40ceea1d5ef9f478b8f366eee8f618546f81b1b5df6d64",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://3a8c668cbc33ceaa1b80f491b6f497c84eaf2ebc6358c536f818ecd0e25534e3",
-				"dweb:/ipfs/QmVsqJYbbbe2P63XDAGPJiz59zX3ssqb21mm3sWvMgbPSL"
+				"bzz-raw://6a19da1bff3c292da54f5ef7c1b7c0b8429616fea6fdbb5e56ee480c83b1244e",
+				"dweb:/ipfs/QmQ5ZnEqyhny5spdW3C4FhAkcNw76PzeaUGe6GeXA2hmR8"
 			]
 		}
 	},
