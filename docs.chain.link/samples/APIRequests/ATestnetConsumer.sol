@@ -14,27 +14,22 @@ contract ATestnetConsumer is ChainlinkClient, ConfirmedOwner {
 
     uint256 private constant ORACLE_PAYMENT = (1 * LINK_DIVISIBILITY) / 10; // 0.1 * 10**18
     uint256 public currentPrice;
+    bytes32 private jobId;
 
     event RequestEthereumPriceFulfilled(
         bytes32 indexed requestId,
         uint256 indexed price
     );
 
-    /**
-     *  Sepolia
-     *@dev LINK address in Sepolia network: 0x779877A7B0D9E8603169DdbD7836e478b4624789
-     * @dev Check https://docs.chain.link/docs/link-token-contracts/ for LINK address for the right network
-     */
     constructor() ConfirmedOwner(msg.sender) {
-        setChainlinkToken(0x779877A7B0D9E8603169DdbD7836e478b4624789);
+        setChainlinkToken(0x326C977E6efc84E512bB9C30f76E30c160eD06FB);
+        setChainlinkOracle(0x673eD0f9D64698FfE3A42058615C30036C3e6d07);
+        jobId = "3eb39c0300164c84b22a3fb997352e42";
     }
 
-    function requestEthereumPrice(
-        address _oracle,
-        string memory _jobId
-    ) public onlyOwner {
+    function requestEthereumPrice() public onlyOwner {
         Chainlink.Request memory req = buildChainlinkRequest(
-            stringToBytes32(_jobId),
+            jobId,
             address(this),
             this.fulfillEthereumPrice.selector
         );
@@ -44,16 +39,16 @@ contract ATestnetConsumer is ChainlinkClient, ConfirmedOwner {
         );
         req.add("path", "USD");
         req.addInt("times", 100);
-        sendChainlinkRequestTo(_oracle, req, ORACLE_PAYMENT);
+        sendChainlinkRequest(req, ORACLE_PAYMENT);
     }
 
     function fulfillEthereumPrice(
         bytes32 _requestId,
         uint256 _price
     ) public recordChainlinkFulfillment(_requestId) {
-        emit RequestEthereumPriceFulfilled(_requestId, _price);
+        //emit RequestEthereumPriceFulfilled(_requestId, _price);
         currentPrice = _price;
-    }
+    } 
 
     function getChainlinkToken() public view returns (address) {
         return chainlinkTokenAddress();
