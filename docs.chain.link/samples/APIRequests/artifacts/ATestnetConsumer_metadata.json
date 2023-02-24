@@ -199,18 +199,7 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "_oracle",
-						"type": "address"
-					},
-					{
-						"internalType": "string",
-						"name": "_jobId",
-						"type": "string"
-					}
-				],
+				"inputs": [],
 				"name": "requestEthereumPrice",
 				"outputs": [],
 				"stateMutability": "nonpayable",
@@ -239,11 +228,7 @@
 		],
 		"devdoc": {
 			"kind": "dev",
-			"methods": {
-				"constructor": {
-					"details": "LINK address in Sepolia network: 0x779877A7B0D9E8603169DdbD7836e478b4624789Check https://docs.chain.link/docs/link-token-contracts/ for LINK address for the right network"
-				}
-			},
+			"methods": {},
 			"version": 1
 		},
 		"userdoc": {
@@ -251,9 +236,6 @@
 			"methods": {
 				"acceptOwnership()": {
 					"notice": "Allows an ownership transfer to be completed by the recipient."
-				},
-				"constructor": {
-					"notice": "Sepolia"
 				},
 				"owner()": {
 					"notice": "Get the current owner"
@@ -395,11 +377,11 @@
 			]
 		},
 		"docs.chain.link/samples/APIRequests/ATestnetConsumer.sol": {
-			"keccak256": "0x27480915e612bee92a1592caf71e281896e6a1472db402886e598d4697d9ff6e",
+			"keccak256": "0x04baa757cd0cbed99324565794023037bafe1d477fab2b00099d18c064f64051",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://897891035d80a5355045432c26d31b8789860a43e541f3a5a613de0842f32fc3",
-				"dweb:/ipfs/QmZw6U5WwKSYZDmPb8t978smBnpX5HDGEZTEkQpshMoQju"
+				"bzz-raw://a479fe66a3ca3521bf2c2f80c065d3059c92a58ee20d64964f8caa8c6d557200",
+				"dweb:/ipfs/QmSvbQ6kxDPFaZ1hQ6fqGcue5zgCmzBt37cf1QEiCj2y5M"
 			]
 		}
 	},

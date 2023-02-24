@@ -18,7 +18,7 @@ contract AMatbaRofexConsumer is ChainlinkClient, ConfirmedOwner {
     );
 
     constructor() ConfirmedOwner(msg.sender) {
-        setChainlinkToken(0x326C977E6efc84E512bB9C30f76E30c160eD06FB);
+        setChainlinkToken(0x779877A7B0D9E8603169DdbD7836e478b4624789);
     }
 
     function requestPrice(

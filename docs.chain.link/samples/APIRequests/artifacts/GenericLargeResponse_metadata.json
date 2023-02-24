@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.18+commit.87f61d96"
+		"version": "0.8.17+commit.8df45f5f"
 	},
 	"language": "Solidity",
 	"output": {
@@ -98,12 +98,12 @@
 					},
 					{
 						"indexed": true,
-						"internalType": "uint256",
-						"name": "price",
-						"type": "uint256"
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
 					}
 				],
-				"name": "RequestPriceFulfilled",
+				"name": "RequestFulfilled",
 				"type": "event"
 			},
 			{
@@ -114,41 +114,13 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "bytes32",
-						"name": "_requestId",
-						"type": "bytes32"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_payment",
-						"type": "uint256"
-					},
-					{
-						"internalType": "bytes4",
-						"name": "_callbackFunctionId",
-						"type": "bytes4"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_expiration",
-						"type": "uint256"
-					}
-				],
-				"name": "cancelRequest",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
 				"inputs": [],
-				"name": "currentPrice",
+				"name": "data",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "bytes",
 						"name": "",
-						"type": "uint256"
+						"type": "bytes"
 					}
 				],
 				"stateMutability": "view",
@@ -158,28 +130,28 @@
 				"inputs": [
 					{
 						"internalType": "bytes32",
-						"name": "_requestId",
+						"name": "requestId",
 						"type": "bytes32"
 					},
 					{
-						"internalType": "uint256",
-						"name": "_price",
-						"type": "uint256"
+						"internalType": "bytes",
+						"name": "bytesData",
+						"type": "bytes"
 					}
 				],
-				"name": "fulfillPrice",
+				"name": "fulfillBytes",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "getChainlinkToken",
+				"name": "image_url",
 				"outputs": [
 					{
-						"internalType": "address",
+						"internalType": "string",
 						"name": "",
-						"type": "address"
+						"type": "string"
 					}
 				],
 				"stateMutability": "view",
@@ -199,24 +171,8 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "string",
-						"name": "_symbol",
-						"type": "string"
-					},
-					{
-						"internalType": "address",
-						"name": "_oracle",
-						"type": "address"
-					},
-					{
-						"internalType": "string",
-						"name": "_jobId",
-						"type": "string"
-					}
-				],
-				"name": "requestPrice",
+				"inputs": [],
+				"name": "requestBytes",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -244,7 +200,14 @@
 		],
 		"devdoc": {
 			"kind": "dev",
-			"methods": {},
+			"methods": {
+				"constructor": {
+					"details": "The oracle address must be an Operator contract for multiword response Sepolia Testnet details: Link Token: 0x779877A7B0D9E8603169DdbD7836e478b4624789 Oracle: 0x6090149792dAAeE9D1D568c9f9a6F6B46AA29eFD (Chainlink DevRel) jobId: 7da2702f37fd48e5b1b9a5715e3509b6"
+				},
+				"fulfillBytes(bytes32,bytes)": {
+					"details": "This is called by the oracle. recordChainlinkFulfillment must be used."
+				}
+			},
 			"version": 1
 		},
 		"userdoc": {
@@ -253,21 +216,34 @@
 				"acceptOwnership()": {
 					"notice": "Allows an ownership transfer to be completed by the recipient."
 				},
+				"constructor": {
+					"notice": "Initialize the link token and target oracle"
+				},
+				"fulfillBytes(bytes32,bytes)": {
+					"notice": "Fulfillment function for variable bytes"
+				},
 				"owner()": {
 					"notice": "Get the current owner"
 				},
+				"requestBytes()": {
+					"notice": "Request variable bytes from the oracle"
+				},
 				"transferOwnership(address)": {
 					"notice": "Allows an owner to begin transferring ownership to a new address, pending."
+				},
+				"withdrawLink()": {
+					"notice": "Allow withdraw of Link tokens from the contract"
 				}
 			},
+			"notice": "THIS IS AN EXAMPLE CONTRACT THAT USES HARDCODED VALUES FOR CLARITY. THIS IS AN EXAMPLE CONTRACT THAT USES UN-AUDITED CODE. DO NOT USE THIS CODE IN PRODUCTION.",
 			"version": 1
 		}
 	},
 	"settings": {
 		"compilationTarget": {
-			"docs.chain.link/samples/APIRequests/AMatbaRofexConsumer.sol": "AMatbaRofexConsumer"
+			"docs.chain.link/samples/APIRequests/GenericBigWord.sol": "GenericLargeResponse"
 		},
-		"evmVersion": "paris",
+		"evmVersion": "london",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -391,12 +367,12 @@
 				"dweb:/ipfs/QmXjy7BmtnPeCLMaMnGGnsxDPGxohfDpYzP8PnUoh6gBGa"
 			]
 		},
-		"docs.chain.link/samples/APIRequests/AMatbaRofexConsumer.sol": {
-			"keccak256": "0x48417063040c56c72c982170101d3a343ccf61129ff4b739b72a16ec3d3cd2ec",
+		"docs.chain.link/samples/APIRequests/GenericBigWord.sol": {
+			"keccak256": "0x100f551b383d1dff92fa6f54c65600ee142d83dc9e330c0874070832748cb4ed",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://deaa25ed8f65945efc813a66f326d456f2ee5926818207f09171c6684938a5e6",
-				"dweb:/ipfs/QmX66uZvrwrzGJn7EiWJfJWcj7AjLYGVT9x1TtVFZD1zWH"
+				"bzz-raw://e4e34eb4277db9fdeb4eae61ab54511d20659fb17b5040e6527d231805e1d85e",
+				"dweb:/ipfs/Qmdg85Uw23mSWPRaL97QTQYup3dR5TWQPSezXkaUF1u9w6"
 			]
 		}
 	},
