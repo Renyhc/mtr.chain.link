@@ -4,16 +4,13 @@ FROM smartcontract/chainlink:1.12.0
 USER root
 RUN mkdir /chainlink
 
-# Arg for api user email, with default value
-ARG API_USER_EMAIL="user@example.com"
+# Arg for api user email
 ENV API_USER_EMAIL=$API_USER_EMAIL
 
-# Arg for api user password, with default value (16-50 characters, miniumun 3 CAPS letters)
-ARG API_USER_PASSWORD="PA@SSword1234!567"
+# Arg for api user password(16-50 characters, miniumun 3 CAPS letters)
 ENV API_USER_PASSWORD=$API_USER_PASSWORD
 
-# Arg for node wallet password, with default value (16-50 characters, miniumun 3 CAPS letters)
-ARG WALLET_PASSWORD="PA@SSword1234!567"
+# Arg for node wallet password, (16-50 characters, miniumun 3 CAPS letters)
 ENV WALLET_PASSWORD=$WALLET_PASSWORD
 
 # Create chainlink node required values to initialize with

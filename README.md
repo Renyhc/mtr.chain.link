@@ -1,6 +1,6 @@
 # Chainlink Node MtR
 
-Nodo de una Red de oráculos descentralizados
+Decentralized oracles Node
 
 ## Getting started
 

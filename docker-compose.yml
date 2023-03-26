@@ -17,24 +17,24 @@ services:
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
 
-  ethereum:
-    image: ethereum/client-go:v1.10.1
-    ports:
-      - 8546:8546
-    command: --ropsten --syncmode light --ws --ipcdisable --ws.addr 0.0.0.0 --ws.origins="*" --datadir /geth
-    volumes: 
-      - geth:/geth
+  # ethereum:
+  #   image: ethereum/client-go:latest
+  #   ports:
+  #     - 8546:8546
+  #   command: --sepolia --ws --ipcdisable --ws.addr 0.0.0.0 --ws.origins="*" --datadir /geth
+  #   volumes: 
+  #     - geth:/geth
 
   chainlink:
     container_name: node_chainlink
     build: .
     env_file:
      .env
-      # - ./.config/.chainlink-goerli/.env
+      # - /.config/.chainlink-goerli/.env
       # - /.config/..chainlink-sepolia/.env      
     environment:
       - DATABASE_URL=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@host.docker.internal:5432/postgres?sslmode=disable
-      - ETH_URL=wss://${ETH_URL}
+      - ETH_URL=${ETH_URL}
     command: local node -p /chainlink/.password -a /chainlink/.api
     restart: on-failure
     ports: 
@@ -47,6 +47,11 @@ services:
       - chainlink_data:/chainlink
 
 volumes: 
-  geth:
+  # geth:
   db-data:
   chainlink_data:
+
+
+
+
+
